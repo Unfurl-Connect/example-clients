@@ -1,0 +1,11 @@
+extends layout.pug
+block content
+    h2(class="text-2xl")= title
+    div 
+        p(class="text-xl") User:
+            span(class="text-blue-900 font-mono") #{user}
+        p(class="text-3xl") Roles: 
+            span(class="text-blue-900 font-mono") #{roles}
+    a(href=`${logout_path}`)
+        button(class="flex-inline w-full p-2 px-4 text-sm font-normal text-white transition duration-100 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 hover:shadow-lg")
+            span(class="flex items-center justify-center gap-2") ✘ Log Out

@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    title #{title}
+    link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css", rel="stylesheet")
+  body
+    div(class="bg-gradient-to-br from-blue-400 to-blue-300 font-sans text-gray-900")
+      div(class="mx-auto container center h-screen max-w-lg flex flex-col justify-center items-center")
+        div(class="w-full rounded-lg bg-white shadow bg-opacity-95" )
+          a(href="/admin", class="text-right w-full float-right mt-4 mr-8 ") ⚙️ 
+            span(class="text-blue-600 underline") Admin
+          main(class="px-16 pb-16 pt-12 flex flex-col justify-center items-center gap-12") 
+            h1(class="text-5xl flex text-blue-800")  
+              img(class="h-14 w-14 mr-0.5", src="/icons/Acme-logo.png", alt="ACME LOGO")
+              | CME
+            block content
+                
+                
