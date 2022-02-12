@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Waiting...</title>
+</head>
+
+<body>
+<script src="https://unpkg.com/oidc-client@1.11.5/lib/oidc-client.js"></script>
+<script>
+
+    const mgr = new UserManager({userStore: new WebStorageStateStore(),
+        loadUserInfo: true});
+
+    mgr.signinRedirectCallback().then(function (user) {
+        window.location.href = '../oidc-client.html';
+    }).catch(function (err) {
+        console.log(err);
+    });
+
+</script>
+</body>
+
+</html>
