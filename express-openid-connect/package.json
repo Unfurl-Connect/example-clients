@@ -3,6 +3,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
+    "debug": "DEBUG=* npm run serve",
     "serve": "node ./src/index.js"
   },
   "engines": {

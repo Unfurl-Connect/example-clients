@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0/firebase.js"></script>
+    <script>
+        const config = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR-PROJECT.firebaseapp.com",
+        };
+        firebase.initializeApp(config);
+        const provider = new firebase.auth.OAuthProvider('oidc.browser-example');
+        provider.addScope("roles");
+    </script>
+</head>
+<body>
+<button onclick="firebase.auth().signInWithPopup(provider).then((u)=>alert(u.additionalUserInfo.profile.roles))" >Connect</button>
+</body>
+</html>

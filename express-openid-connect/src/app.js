@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
     res.render('main', {title: "ACME Home", login_path:"/login"});
 });
 
-app.get('/dashboard', claimIncludes('roles', 'user'), (req, res) =>
+app.get('/dashboard', (req, res) =>
   res.render('dashboard', {title: "ACME Dashboard", logout_path:"/logout",
    user: req.oidc.user.sub, roles: req.oidc.idTokenClaims.roles})
 );
